@@ -2,16 +2,20 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .container{
-    /* background-color: rgba(0, 0, 0); */
+    background-color: rgba(0, 128, 0, 0.2);
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/login-bg.png");
+    background-image: url("../img/mu_2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -19,10 +23,10 @@
 }
 .box{
     background-color: transparent;
-    backdrop-filter: blur(8px);
-    border: 2px solid rgba(255, 255, 255);
-    height: 50vh;
-    width: 25%;
+    /* backdrop-filter: blur(8px); */
+    /* border: 2px solid rgba(255, 255, 255); */
+    height: 60vh;
+    width: 28%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -34,8 +38,67 @@
     align-items: center;
     background-color: white;
     width: 50%;
-    height: 25px;
+    height: 30px;
     border-radius: 50px;
     color: black;
     text-decoration: none;
+    transition: 0.5s;
+}
+.box a i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.logout button i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.logout button{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+#log_btn{
+    padding: 15px 25px;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+#log_btn:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#scanner:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#show_attendance:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#update:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#delete:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#scanner{
+    display: flex;
+    padding-right: 10px;
 }

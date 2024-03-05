@@ -7,7 +7,7 @@ let subjects = 'subjects'
 
 module.exports = {
     getHome: (request, response) => {
-        response.render('faculty_home.ejs')
+        response.render('faculty_home.ejs', {user_id: request.session.user_id,})
     },
 
     getScanner: async (request, response) => {

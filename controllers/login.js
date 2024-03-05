@@ -49,14 +49,14 @@ module.exports = {
         console.log(user[0][0])
 
         if(user[0][0] == undefined){
-            return res.render('/login', {info: "error"})
+            res.render('/login', {info: "error"})
         }
         
         const isMatch = await bcrypt.compare(password, user[0][0].password)
         console.log(isMatch)
 
         if(!isMatch){
-            return res.render('/login', {info: "error"})
+            res.render('/login', {info: "error"})
         }
 
         req.session.isAuth = true;

@@ -5,16 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login Page</title>
 <link rel="stylesheet" href="../css/faculty_home.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
     <div class="container">
         <div class="box">
-            <a id="scanner" href="/faculty/scanner">Scanner page here</a>
-            <a id="show_attendance" href="/faculty/show_attendance">show attendance</a>
-            <a id="undate" href="/faculty/update_attendance">update attendance</a>
-            <a id="delete" href="/faculty/delete_attendance">delete attendance</a>
-            <form action="<%=user_id.role%>/logout" method="post">
-                <button>logout</button>
+            <a id="scanner" href="/hod/scanner"> <i class='bx bx-qr-scan'></i> Scanner here </a>
+            <a id="show_attendance" href="/hod/show_attendance"><i class='bx bxs-show'></i>show attendance</a>
+            <a id="update" href="/hod/update_attendance"><i class='bx bxs-edit'></i>update attendance</a>
+            <a id="delete" href="/hod/delete_attendance"><i class='bx bxs-trash' ></i>delete attendance</a>
+            <form action="<%=user_id.role%>/logout" method="post" class="logout">
+                <button id="log_btn"><i class='bx bx-log-out'></i>logout</button>
             </form>
         </div>
     </div>
