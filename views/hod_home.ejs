@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/hod_home.css">
+
+</head>
+<body\>
+    <div class="container">
+        <div class="box">
+            <a id="scanner" href="/hod/scanner"> <i class='bx bx-qr-scan'></i> Scanner here </a>
+            <a id="show_attendance" href="/hod/show_attendance"><i class='bx bxs-show'></i>show attendance</a>
+            <a id="update" href="/hod/update_attendance"><i class='bx bxs-edit'></i>update attendance</a>
+            <a id="delete" href="/hod/delete_attendance"><i class='bx bxs-trash' ></i>delete attendance</a>
+        </div>
+        <div class="box">
+            <a id="scanner" href="/hod/create_subject"><i class='bx bxs-book-add'></i></i>create subject</a>
+            <a id="show_attendance" href="/hod/show_subject"><i class='bx bxs-show'></i>show subject</a>
+            <a id="update" href="/hod/update_subject"><i class='bx bxs-edit'></i>update subject</a>
+            <a id="delete" href="/hod/delete_subject"><i class='bx bxs-trash' ></i>delete subject</a>
+        </div>
+    </div>
+    <form action="<%=user_id.role%>/logout" method="post" class="logout">
+        <button id="log_btn"><i class='bx bx-log-out'></i>logout</button>
+    </form>
+    
+</body>
+</html>

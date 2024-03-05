@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="/<%=user_id.role%>"><i class='bx bxs-home'></i></a>
+
+    <main>
+        <div id="reader"></div>
+        <div id="result"></div>
+        <select name="subject" id="subject_name">
+            <option value="">select subject</option>
+            <% for(let i = 0; i < subjects.length; i++){ %>
+                <option value="<%= subjects[i].name %>"><%= subjects[i].name %></option>
+            <% } %>
+        </select>
+    </main>
+    <footer id="footer">
+        <h2>OR</h2>
+        <h2>Enter manually</h2>
+        <form action="/<%=user_id.role%>/manually_add_user" method="post">
+            <select name="subject" id="subject_name">
+                <option value="">select subject</option>
+                <% for(let i = 0; i < subjects.length; i++){ %>
+                    <option value="<%= subjects[i].name %>"><%= subjects[i].name %></option>
+                <% } %>
+            </select>
+            <input id="input_field" type="number" placeholder="Enrollment NO" name="enno">
+            <button type="submit">submit</button>
+        </form>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src='../js/main.js'></script>
+</body>
+</html>

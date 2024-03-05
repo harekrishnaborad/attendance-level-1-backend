@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/utility.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <a href="/<%=user_id.role%>"><i class='bx bxs-home'></i></a>
+    <div class="container">
+    <form class="center" action="/<%=user_id.role%>/showAttendance" method="post">
+        <select name="date">
+            <option value="">select date</option>
+            <% for(let i = 0; i < distinct_date.length; i++){ %>
+                <option value="<%= distinct_date[i].date %>"><%= distinct_date[i].date %></option>
+            <% } %>
+        </select>
+        <select name="subject">
+            <option value="">select subject</option>
+            <% for(let i = 0; i < distinct_subject.length; i++){ %>
+                <option value="<%= distinct_subject[i].subject %>"><%= distinct_subject[i].name %></option>
+            <% } %>
+        </select>
+    
+        <button type="submit">submit</button>
+    </form>
+
+    <main class="center">
+        <table border="1" id="tableId">
+            <tr>
+                <th>id</th>
+                <th>date</th>
+                <th>time</th>
+                <th>subject</th>
+                <th>present</th>
+            </tr>
+
+            <% if(result_attendance != "no"){ %>
+
+                <% for(let i = 0; i < result_attendance.length; i++){ %>
+                    <tr>
+                        <td><%= result_attendance[i].id %></td>
+                        <td><%= result_attendance[i].date %></td>
+                        <td><%= result_attendance[i].time %></td>
+                        <td><%= result_attendance[i].subject %></td>
+                        <td><%= result_attendance[i].present %></td>
+                    </tr>
+                <% } %>
+            <% } %>
+        </table>
+        <button id="exportButton">Export to Excel</button>
+    </main>
+    </div>
+    <script src="../js/export.js"></script>
+</body>
+</html>

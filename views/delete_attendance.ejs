@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/<%=user_id.role%>">home</a>
+    <form action="/<%=user_id.role%>/deleteAttendance" method="post">
+        <select name="field">
+            <option value="">select field</option>
+            <option value="id">id</option>
+            <option value="date">date</option>
+            <option value="time">time</option>
+            <option value="subject">subject</option>
+            <option value="present">present</option>
+        </select>
+        <input type="text" name="field_value" placeholder="enter field value">
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+body{
+
+    background-image: url("../img/login-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    /* background-color: rgba(0, 0, 0); */
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0);
+    height: 50vh;
+    width: 28%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.box a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+    height: 30px;
+    border-radius: 50px;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+.box a i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.logout button i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.logout button{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+#log_btn{
+    padding: 15px 25px;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+#log_btn:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#scanner:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#show_attendance:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#update:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#delete:hover{
+    scale: 1.2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#scanner{
+    display: flex;
+    padding-right: 10px;
+}
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="../css/faculty_home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <a id="scanner" href="/faculty/scanner">Scanner page here</a>
+            <a id="show_attendance" href="/faculty/show_attendance">show attendance</a>
+            <a id="undate" href="/faculty/update_attendance">update attendance</a>
+            <a id="delete" href="/faculty/delete_attendance">delete attendance</a>
+            <form action="<%=user_id.role%>/logout" method="post">
+                <button>logout</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/<%=user_id.role%>">home</a>
+    <form action="/<%=user_id.role%>/updateAttendance" method="post">
+        <input type="date" name="date">
+        <input type="time" name="time">
+        <input type="number" name="enno">
+        <select name="subject" id="subject_name">
+            <option value="">select subject</option>
+            <% for(let i = 0; i < subjects.length; i++){ %>
+                <option value="<%= subjects[i].name %>"><%= subjects[i].name %></option>
+            <% } %>
+        </select>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
