@@ -70,8 +70,6 @@ body{
     width: 100%;
     margin: 45px 0px;
     position: relative;
-    transition: 1s;
-
 }
 
 .input_box input{

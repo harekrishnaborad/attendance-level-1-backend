@@ -5,15 +5,18 @@ const loginController = require('../controllers/login')
 
 const noLoggin = (req, res, next) => {
     if(req.session.isAuth){
-        res.redirect(`${req.session.user_id.role}`)
+        res.redirect(`/${req.session.user_id.role}`)
     }else{
-        res.render('login.ejs', {info: "noError"})
+        next()
     }
 }
 
-router.get('/', loginController.getRegister)
+router.get('/', noLoggin, loginController.getRegister)
 router.get('/login', noLoggin, loginController.getLogin)
 router.post('/checkUsers', loginController.checkUsers)
 router.post('/add_User', loginController.addUser)
+router.get('/redirect',loginController.redirect_user)
+router.get('/redirect_user',loginController.redirect_user_2)
+
 
 module.exports = router
